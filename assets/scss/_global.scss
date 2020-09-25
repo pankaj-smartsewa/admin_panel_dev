@@ -1,0 +1,131 @@
+// Global component styles
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+a {
+  &:focus {
+    outline: none;
+  }
+}
+
+// Main page wrapper
+#wrapper {
+  display: flex;
+  #content-wrapper {
+    background-color: $gray-100;
+    width: 100%;
+    overflow-x: hidden;
+    // width: calc(100% - $sidebar-collapsed-width);
+    // right: 0;
+    // position: absolute;
+    #content {
+      flex: 1 0 auto;
+    }
+  }
+}
+
+// Set container padding to match gutter width instead of default 15px
+.container,
+.container-fluid {
+  padding-left: $grid-gutter-width;
+  padding-right: $grid-gutter-width;
+}
+
+// Scroll to top button
+.scroll-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  display: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  text-align: center;
+  color: $primary-white;
+  background: fade-out($gray-800, .5);
+  line-height: 46px;
+  &:focus,
+  &:hover {
+    color: white;
+  }
+  &:hover {
+    background: $gray-800;
+  }
+  i {
+    font-weight: 800;
+  }
+}
+
+.scroll-active {
+  display: block;
+}
+.scroll-inactive {
+  display: none;
+}
+.image-table td{
+  vertical-align: middle;
+}
+ng-select.custom {
+  .below {
+    margin: -5px;
+    border-color: transparent;
+    top: 39px !important;
+    left: 13px !important;
+  }
+  .focus {
+    outline: 0;
+  }
+  select-dropdown>div .options {
+    background-color: $secondary-color3;
+  }
+  select-dropdown .highlighted, select-dropdown .selected.highlighted {
+    background-color: $secondary-color1;
+  }
+}
+.datatable-header-inner{
+  width: 100% !important;
+}
+.datatable-scroll{
+  display: inherit !important;
+}
+.datatable-row-center{
+  width: 100% !important;
+}
+.datatable-body-row{
+  width: 100% !important;
+}
+ng-select>div>div.multiple {
+  padding: 0 0px !important;
+}
+ng-select>div>div.multiple>div.option {
+  font-size: 10px !important;
+  color: $primary-white !important;
+  background-color: $secondary-color1 !important;
+  border-color: $secondary-color1 !important;
+}
+ng-select>div>div.multiple>div.option span.deselect-option {
+  color: $primary-white !important;
+  line-height: 16px !important;
+  font-size: 12px !important;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.view-thumbnail-img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 180px;
+  height: 180px;
+  margin: 5px;
+}
+.view-thumbnail-img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+label span { color: $special-red; }
